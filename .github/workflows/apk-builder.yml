@@ -24,6 +24,8 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: ""
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -96,6 +98,10 @@ jobs:
             kotlinOptions {
               jvmTarget = "17"
             }
+          }
+
+          dependencies {
+            implementation "androidx.appcompat:appcompat:1.7.0"
           }
           EOF
 
